@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - My Cosmetic Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div id="message"></div>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="messageInput" name="message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+   
+    <div id="chatbox-icon" onclick="toggleChatbox()">
+        <img src="chaticon.svg" alt="Chat" style="width: 50px; height: 50px;">
+    </div>
+
+    <!-- Chatbox -->
+    <div id="chatbox" class="chat-box" style="display: none;">
+        <div class="chat-box-message"></div>
+        <textarea placeholder="Type your message here..."></textarea>
+        <button type="button" onclick="sendMessage()">Send</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
